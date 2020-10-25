@@ -1,0 +1,59 @@
+﻿
+@{
+    Layout = "_LayoutAdmin";
+}
+
+<form>
+    <div>
+        <h1>Agregar Producto</h1>
+
+        <label>Nombre:</label>
+        <input type="text" id="txtNombre" required="required" />
+
+        <label>Categoría:</label>
+        <select id="cmbCategoria" required="required">
+            <option selected="selected" value="">-- Seleccionar categoria --</option>           
+        </select>
+
+        <label>Unidad de Medida:</label>
+        <input type="text" id="txtUnidadMedida" required="required" />
+
+        <label>Precio:</label>
+        <input type="number" id="txtPrecio" required="required" step="0.01" min="0.1" />
+
+        <label>Descripción</label>
+        <textarea rows="2" cols="20" id="txtDescripcion" required="required">
+</textarea>
+
+        <label>Imagen:</label>
+        <input type="file" id="fileUpload1" accept="image/jpg" />
+
+        <img id="imagePreview" src="~/img_frutas/no-disponible.png" alt="Vista previa de la imagen" />
+
+        <div class="botones">
+            <p id="error"></p>
+            <input type="submit" value="Agregar" id="btnAgregar" />
+            <input type="button" value="Cancelar" id="btnCancelar" formnovalidate="formnovalidate" />
+        </div>
+    </div>
+</form>
+<script>
+    function mostrarImagen(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                $('#imagePreview').attr('src', e.target.result);
+            }
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+
+    $(document).ready(function () {
+        $("#fileUpload1").change(function () {
+            mostrarImagen(this);
+        });
+    });
+
+</script>
+

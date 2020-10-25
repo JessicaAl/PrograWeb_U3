@@ -1,0 +1,21 @@
+﻿
+@{
+    Layout = "_LayoutAdmin";
+}
+
+<form>
+    <div>
+        <h1>Editar Categoría</h1>
+
+        <input type="hidden" id="id" />
+
+        <label>Nombre:</label>
+        <input type="text" id="txtNombre" required="required" />
+
+        <div class="botones">
+            <p id="error"></p>
+            <input type="submit" value="Guardar" id="btnGuardar" />
+            <input type="button" value="Cancelar" id="btnCancelar" formnovalidate="formnovalidate" />
+        </div>
+    </div>
+</form>

@@ -1,0 +1,19 @@
+﻿@{
+    Layout = "_LayoutAdmin";
+}
+
+<form>
+    <div>
+        <h1>Eliminar Categoría</h1>
+
+        <input type="hidden" id="id" />
+
+        <p>¿Está seguro de eliminar la categoría "<span id="nombreCategoria">Citricos</span>"?</p>
+
+        <div class="botones">
+            <p id="error"></p>
+            <input type="submit" value="Si" id="btnSi" />
+            <input type="button" value="No" id="btnNo" formnovalidate="formnovalidate" />
+        </div>
+    </div>
+</form>
