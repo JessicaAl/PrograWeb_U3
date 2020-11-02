@@ -1,0 +1,7 @@
+C:\Users\Jessica Alarcón\source\repos\JessicaAl\PrograWeb_U3\Act2_ZooPlanet\obj\Debug\netcoreapp3.1\Act2_ZooPlanet.AssemblyInfoInputs.cache
+C:\Users\Jessica Alarcón\source\repos\JessicaAl\PrograWeb_U3\Act2_ZooPlanet\obj\Debug\netcoreapp3.1\Act2_ZooPlanet.AssemblyInfo.cs
+C:\Users\Jessica Alarcón\source\repos\JessicaAl\PrograWeb_U3\Act2_ZooPlanet\obj\Debug\netcoreapp3.1\Act2_ZooPlanet.csproj.CoreCompileInputs.cache
+C:\Users\Jessica Alarcón\source\repos\JessicaAl\PrograWeb_U3\Act2_ZooPlanet\obj\Debug\netcoreapp3.1\Act2_ZooPlanet.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Jessica Alarcón\source\repos\JessicaAl\PrograWeb_U3\Act2_ZooPlanet\obj\Debug\netcoreapp3.1\Act2_ZooPlanet.RazorAssemblyInfo.cache
+C:\Users\Jessica Alarcón\source\repos\JessicaAl\PrograWeb_U3\Act2_ZooPlanet\obj\Debug\netcoreapp3.1\Act2_ZooPlanet.RazorAssemblyInfo.cs
+C:\Users\Jessica Alarcón\source\repos\JessicaAl\PrograWeb_U3\Act2_ZooPlanet\obj\Debug\netcoreapp3.1\Act2_ZooPlanet.csprojAssemblyReference.cache
