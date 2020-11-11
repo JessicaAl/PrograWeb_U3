@@ -24,7 +24,7 @@ namespace Act3U3_Razas.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
+// To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
                 optionsBuilder.UseMySql("server=204.93.167.23;user=sistem14_u3;password=unidad_3;database=sistem14_razas", x => x.ServerVersion("5.6.46-mysql"));
             }
         }
