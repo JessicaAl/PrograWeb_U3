@@ -1,0 +1,118 @@
+﻿@model Act3U3_Razas.Models.ViewModels.InfoPerroViewModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    Layout = "_AdminLayout";
+}
+
+<form method="post" asp-action="Editar" asp-controller="Home" asp-area="Admin" enctype="multipart/form-data">
+    <div class="datosraza">
+        <input hidden="hidden" name="Id" id="Id" />
+        <h1 style="text-align:center; color:goldenrod">Agregar Raza</h1>
+
+        <div class="labels">
+            <label style="margin-right:6.8%; margin-top:0.5%">C&oacute;digo:</label>
+            <input style="margin-top:0.5%;" type="number" asp-for="Raza.Id" required="required" min="0" /><br />
+
+            <label style="margin-right:6%; margin-top:0.5%">Nombre:</label>
+            <input style="margin-top:0.5%;" type="text" asp-for="Raza.Nombre" required="required" /><br />
+
+            <label style="margin-right:1.5%; margin-top:0.5%">País de origen:</label>
+
+            <select style="margin-top:0.5%;" asp-for="Raza.IdPais" required="required" asp-items="@(new SelectList(Model.Paises, "Id", "Nombre" ))">
+                <option selected="selected">-- Seleccionar raza --</option>
+            </select><br />
+
+            <label style="margin-right:2.5%; margin-top:0.5%">Otro nombre:</label>
+            <input style="margin-top:0.5%;" type="text" required="required" asp-for="Raza.OtrosNombres" /><br />
+
+            <label style="margin-right:2.39%; margin-top:0.5% ">Peso m&iacute;nimo:</label>
+            <input style="margin-top:0.5%;" type="number" asp-for="Raza.PesoMin" required="required" /><br />
+
+            <label style="margin-right:2.2%; margin-top:0.5% ">Peso m&aacute;ximo:</label>
+            <input style="margin-top:0.5%;" type="number" asp-for="Raza.PesoMax" required="required" /><br />
+
+            <label style="margin-right:1.8%; margin-top:0.5% ">Altura m&iacute;nima:</label>
+            <input style="margin-top:0.5%;" type="number" asp-for="Raza.AlturaMin" required="required" /><br />
+
+            <label style="margin-right:1.5%; margin-top:0.5% ">Altura m&aacute;xima:</label>
+            <input style="margin-top:0.5%;" type="number" asp-for="Raza.AlturaMax" required="required" /><br />
+
+            <label style="margin-right:0.5%; margin-top:0.5% ">Esperanza de vida:</label>
+            <input style="margin-top:0.5%;" type="number" asp-for="Raza.EsperanzaVida" required="required" /><br />
+
+            <label style="margin-right:1%; margin-top:0.5% ">Descripci&oacute;n:</label>
+            <textarea style="margin-top:2%;" rows="3" cols="40" asp-for="Raza.Descripcion" required="required"></textarea><br />
+        </div>
+
+        <br />
+
+        <div class="estrazas">
+            <h2 style="text-align:center; color:goldenrod">Características Físicas</h2>
+
+            <label style="margin-right:4%; margin-top:0.5%">Patas:</label>
+            <input style="margin-top:0.5%;" type="text" required="required" asp-for="Raza.Caracteristicasfisicas.Patas" /><br />
+
+            <label style="margin-right:4.8%; margin-top:0.5%">Cola:</label>
+            <input style="margin-top:0.5%;" type="text" required="required" asp-for="Raza.Caracteristicasfisicas.Cola" /><br />
+
+            <label style="margin-right:3.2%; margin-top:0.5%">Hocico:</label>
+            <input style="margin-top:0.5%;" type="text" required="required" asp-for="Raza.Caracteristicasfisicas.Hocico" /><br />
+
+            <label style="margin-right:4.95%; margin-top:0.5%">Pelo:</label>
+            <input style="margin-top:0.5%;" type="text" required="required" asp-for="Raza.Caracteristicasfisicas.Pelo" /><br />
+
+            <label style="margin-right:4.2%; margin-top:0.5%">Color:</label>
+            <input style="margin-top:0.5%;" type="text" required="required" asp-for="Raza.Caracteristicasfisicas.Color" /><br />
+        </div>
+        <br />
+
+        <div class="carrazas">
+            <h2 style="text-align:center; color:goldenrod">Estadísticas</h2>
+
+            <label style="margin-right:9.8%; margin-top:0.5%">Nivel de energía:</label>
+            <input style="margin-top:0.5%;" type="number" required="required" asp-for="Raza.Estadisticasraza.NivelEnergia" /><br />
+
+            <label style="margin-right:2%; margin-top:0.5%">Facilidad de entrenamiento:</label>
+            <input style="margin-top:0.5%;" type="number" required="required" asp-for="Raza.Estadisticasraza.FacilidadEntrenamiento" /><br />
+
+            <label style="margin-right:7.5%; margin-top:0.5%">Ejercicio obligatorio:</label>
+            <input style="margin-top:0.5%;" type="number" required="required" asp-for="Raza.Estadisticasraza.EjercicioObligatorio" /><br />
+
+            <label style="margin-right:3.5%; margin-top:0.5%">Amistad de desconocidos:</label>
+            <input style="margin-top:0.5%;" type="number" required="required" asp-for="Raza.Estadisticasraza.AmistadDesconocidos" /><br />
+
+            <label style="margin-right:8.5%; margin-top:0.5%">Amistad de perros:</label>
+            <input style="margin-top:0.5%;" type="number" required="required" asp-for="Raza.Estadisticasraza.AmistadPerros" /><br />
+
+            <label style="margin-right:5.3%; margin-top:0.5%">Necesidad de cepillado:</label>
+            <input style="margin-top:0.5%;" type="number" required="required" asp-for="Raza.Estadisticasraza.NecesidadCepillado" /><br />
+        </div>
+        <br />
+
+        <img id="imagePreview" src="~/imgs_perros/NoPhoto.jpg" alt="Vista previa de la imagen" /><br /><br />
+
+        <div class="labelimagen">
+            <label style="width:auto; height:10px;">Imagen:</label>
+            <input type="file" id="fileUpload1" accept="image/jpg" asp-for="Archivo" onchange="mostrarImagen(this)" /><br /><br />
+        </div>
+
+        <div class="botones">
+            <p id="error">@Html.ValidationSummary()</p>
+            <input type="submit" value="Editar" id="btnAgregar" />
+            <a asp-action="Index" asp-controller="Home"><input type="button" value="Cancelar" id="btnCancelar" formnovalidate="formnovalidate" /></a>
+        </div>
+    </div>
+</form>
+
+<script>
+    function mostrarImagen(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                document.getElementById("imagePreview").src = e.target.result;
+            }
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+</script>

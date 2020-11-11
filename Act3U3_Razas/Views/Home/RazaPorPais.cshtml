@@ -1,0 +1,30 @@
+﻿@model Act3U3_Razas.Models.ViewModels.RazaPorPaisViewModel
+
+@{
+    Layout = "_Layout";
+}
+
+<section class="nav">
+    <h3>Razas por país</h3>
+    <nav>
+        <a href="/Home/">Listado Alfabético de Razas</a>
+    </nav>
+</section>
+
+<section class="list">
+    @foreach (var item in Model.Paises)
+    {
+        <h4>@item.Nombre</h4>
+        <ul>
+            @foreach (var i in item.Razas.Where(x => x.Eliminado == 0))
+            {
+                <li>
+                    <a href="~/Raza/@(i.Nombre.Replace(" ", "-"))">
+                        <img src="/imgs_perros/@(i.Id)_0.jpg" />
+                        @i.Nombre
+                    </a>
+                </li>
+            }
+        </ul>
+    }
+</section>

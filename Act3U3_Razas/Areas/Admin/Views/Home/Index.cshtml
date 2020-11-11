@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Act3U3_Razas.Models.Razas>
+
+@{
+    Layout = "_AdminLayout";
+}
+
+<section class="nav">
+    <h3>Lista de Razas</h3>
+</section>
+
+<table >
+    <colgroup>
+        <col style="width:80px" />
+        <col style="width:30%" />
+    </colgroup>
+    <caption style="margin-bottom:10px">
+        <a href="~/Admin/Home/Agregar"  id="b"><i class="fa fa-plus"></i><img src="~/imgs/add.png" 
+        style="width:auto; height:50px; margin:5px auto" /><br />Agregar Raza</a>
+    </caption>
+    <thead>
+        <tr class="subt">
+            <th id="raza">Raza</th>
+            <th id="acciones">Opciones</th>
+        </tr>
+    </thead>
+    @foreach (var item in Model)
+    {
+    <tbody>
+        <tr>
+            <td class="nombre" style="margin-right:20px">@item.Nombre</td>
+            <td id="acc" style="margin-left:5%">
+                <a href="/Admin/Home/Editar/@(item.Id)" id="b"><i class="fa fa-edit"></i> Editar</a>
+                <a href="javascript:eliminar(@item.Id)" id="b"><i class="fa fa-remove"></i> Eliminar</a>
+            </td>
+        </tr>
+    </tbody>
+    }
+</table>
+
+<form method="post" action="~/Admin/Home/Eliminar">
+    <input type="hidden" name="Id" id="razaid" />
+</form>
+
+<script>
+        function eliminar(id) {
+            if (confirm('¿Deseas eliminar la raza seleccionada?')) {
+                document.getElementById("razaid").value = id;
+                document.querySelector("form").submit();
+            }
+        }
+</script>
